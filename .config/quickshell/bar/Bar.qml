@@ -398,7 +398,7 @@ Scope {
                                 Text {
                                     anchors.verticalCenter: parent.verticalCenter
                                     text: SystemInfo.batteryCharging ? "  " : "  "
-                                    color: sysInfo.batteryColor
+                                    color: root.theme.accentPrimary
                                     font.pixelSize: 14
                                     font.family: root.font
                                 }
