@@ -380,6 +380,37 @@ Scope {
                                 }
                             }
                         }
+
+                        // Battery
+                        Rectangle {
+                            height: 24
+                            width: batteryContent.width + 12
+                            radius: 12
+                            color: root.theme.bgSurface
+                            Accessible.role: Accessible.StaticText
+                            Accessible.name: "Battery: " + SystemInfo.batteryLevelRaw + "%"
+
+                            Row {
+                                id: batteryContent
+                                anchors.centerIn: parent
+                                spacing: 6
+
+                                Text {
+                                    anchors.verticalCenter: parent.verticalCenter
+                                    text: SystemInfo.batteryCharging ? "  " : "  "
+                                    color: sysInfo.batteryColor
+                                    font.pixelSize: 14
+                                    font.family: root.font
+                                }
+                                Text {
+                                    anchors.verticalCenter: parent.verticalCenter
+                                    text: SystemInfo.batteryLevelRaw + "%"
+                                    color: root.theme.textPrimary
+                                    font.pixelSize: 11
+                                    font.family: root.font
+                                }
+                            }
+                        }
                         Rectangle {
                             height: 24
                             width: memContent.width + 12
