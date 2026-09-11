@@ -18,6 +18,7 @@ alias xterm='xterm -bg black -fg white'
 alias td='tmux detach'
 alias ta='tmux attach'
 alias i='yay -S'
+alias yayf="yay -Slq | fzf --multi --preview 'yay -Sii {1}' --preview-window=down:75% | xargs -ro yay -S"
 
 
 
@@ -29,6 +30,8 @@ function y() {
 	command rm -f -- "$tmp"
 }
 
+
+bindkey -s '^T' 'tmux\n'
 
 run() {
     if [[ $# -eq 0 ]]; then
