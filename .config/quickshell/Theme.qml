@@ -28,6 +28,7 @@ readonly property color accentPrimary: {
             "ranni3.png": "#80A2CF",
             "kessoku.png": "#F3ABB9",
             "katanazero.png": "#58377F",
+            "katanazero.jpg": "#58377F",
             "ed.jpg": "#BF252D",
             "ed2.jpg": "#E6C345",
             "ed3.png": "#9A3537",

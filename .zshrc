@@ -19,8 +19,19 @@ alias td='tmux detach'
 alias ta='tmux attach'
 alias i='yay -S'
 alias yayf="yay -Slq | fzf --multi --preview 'yay -Sii {1}' --preview-window=down:75% | xargs -ro yay -S"
+alias py='python'
 
 
+
+
+clip() {
+    if [ -f "$1" ]; then
+        wl-copy < "$1"
+    else
+        echo "Error: File '$1' not found." >&2
+        return 1
+    fi
+}
 
 function y() {
 	local tmp cwd; tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
@@ -49,5 +60,6 @@ run() {
 
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
+eval "$(direnv hook zsh)"
 
 echo -ne '\e[6 q'

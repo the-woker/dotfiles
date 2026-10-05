@@ -8,6 +8,7 @@ require("nvim-treesitter").setup({
 		"lua",
 		"luadoc",
 		"markdown",
+		"python",
 		"printf",
 		"toml",
 		"vim",

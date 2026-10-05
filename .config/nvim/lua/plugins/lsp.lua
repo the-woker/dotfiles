@@ -136,6 +136,7 @@ return {
 			"glsl_analyzer",
 			"neocmakelsp",
 			"stylua", -- Used to format Lua code
+			"basedpyright",
 			"cpptools",
 		})
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
